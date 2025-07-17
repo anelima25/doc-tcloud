@@ -1,1 +1,46 @@
-Temas
+<h1>Documentação de Temas</h1>
+<p>Esta página demonstra o conceito e a aplicação dos temas definidos em <code>_tc-rev-themes.scss</code>.</p>
+
+<h2>O que são temas?</h2>
+<p>Temas permitem alterar rapidamente o visual de componentes ou páginas inteiras, mudando cores, fundos e outros estilos de acordo com o contexto (ex: tema claro, escuro, high-contrast, etc.).</p>
+
+<h2>Como aplicar um tema</h2>
+<p>Normalmente, um tema é aplicado adicionando uma classe específica ao elemento <code>&lt;body&gt;</code> ou a um container principal. As variáveis CSS e estilos definidos para aquele tema passam a valer para todos os elementos filhos.</p>
+
+<h3>Exemplo de uso</h3>
+<div class="demo-block" style="display:flex; gap:32px;">
+  <div style="width:180px;">
+    <div class="theme-light" style="padding:1em; border-radius:8px; background:#fff; color:#222; border:1px solid #eee;">
+      <strong>.theme-light</strong><br/>
+      Exemplo de tema claro
+    </div>
+  </div>
+  <div style="width:180px;">
+    <div class="theme-dark" style="padding:1em; border-radius:8px; background:#222; color:#fff; border:1px solid #444;">
+      <strong>.theme-dark</strong><br/>
+      Exemplo de tema escuro
+    </div>
+  </div>
+</div>
+
+<p>Você pode definir outros temas, como <code>.theme-high-contrast</code>, e customizar variáveis CSS para cada um.</p>
+
+<h2>Exemplo de CSS para temas</h2>
+<pre><code>:root {
+  --background: #fff;
+  --text: #222;
+}
+.theme-dark {
+  --background: #222;
+  --text: #fff;
+}
+body, .app-container {
+  background: var(--background);
+  color: var(--text);
+}
+</code></pre>
+
+<p>Assim, ao adicionar <code>theme-dark</code> ao <code>&lt;body&gt;</code>, todo o site ficará escuro automaticamente.</p>
+
+<hr/>
+<p style="font-size:0.95em;color:#888;">Consulte o arquivo <code>styles/scss/_tc-rev-themes.scss</code> para detalhes técnicos e manutenção.</p>

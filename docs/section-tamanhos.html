@@ -1,3 +1,74 @@
 <h1>Documentação de Tamanhos</h1>
-<p>Esta página será dedicada à documentação das classes de tamanhos definidas em <code>_tc-rev-sizes.scss</code>.</p>
-<p><em>Exemplo de uso, tabela de classes e demonstrações serão adicionados aqui.</em></p>t
+<p>Esta página demonstra as classes utilitárias de tamanhos disponíveis em <code>_tc-rev-sizes.scss</code>.</p>
+
+<h2>Altura e Largura</h2>
+<p>Use as classes <code>.h-*</code> e <code>.w-*</code> para definir altura e largura rapidamente. Os valores seguem a escala definida nas variáveis <code>--size-*</code>.</p>
+<div class="demo-block" style="display:flex; gap:24px; align-items: flex-end;">
+  <div>
+    <div class="h-16 w-16" style="background:#e3e3e3; display:inline-block;"></div>
+    <div><code>.h-16 .w-16</code></div>
+  </div>
+  <div>
+    <div class="h-32 w-32" style="background:#e3e3e3; display:inline-block;"></div>
+    <div><code>.h-32 .w-32</code></div>
+  </div>
+  <div>
+    <div class="h-48 w-48" style="background:#e3e3e3; display:inline-block;"></div>
+    <div><code>.h-48 .w-48</code></div>
+  </div>
+  <div>
+    <div class="h-80 w-80" style="background:#e3e3e3; display:inline-block;"></div>
+    <div><code>.h-80 .w-80</code></div>
+  </div>
+</div>
+
+<h2>Padding</h2>
+<p>Use as classes <code>.pad-*</code> para padding em todos os lados, <code>.pad-x-*</code> para padding horizontal, <code>.pad-y-*</code> para padding vertical, e <code>.pad-l-*</code>, <code>.pad-r-*</code>, <code>.pad-t-*</code>, <code>.pad-b-*</code> para lados específicos.</p>
+<div class="demo-block" style="display:flex; gap:24px;">
+  <div class="pad-16" style="background:#e3e3e3;">
+    <code>.pad-16</code>
+  </div>
+  <div class="pad-x-32" style="background:#e3e3e3;">
+    <code>.pad-x-32</code>
+  </div>
+  <div class="pad-y-8" style="background:#e3e3e3;">
+    <code>.pad-y-8</code>
+  </div>
+  <div class="pad-t-24 pad-b-24" style="background:#e3e3e3;">
+    <code>.pad-t-24 .pad-b-24</code>
+  </div>
+</div>
+
+<h2>Margin</h2>
+<p>Use as classes <code>.mar-*</code> para margin em todos os lados, <code>.mar-x-*</code> para margin horizontal, <code>.mar-y-*</code> para margin vertical, e <code>.mar-l-*</code>, <code>.mar-r-*</code>, <code>.mar-t-*</code>, <code>.mar-b-*</code> para lados específicos.</p>
+<div class="demo-block" style="display:flex; gap:24px;">
+  <div style="background:#e3e3e3;">
+    <div class="mar-16" style="background:#b3b3b3;">.mar-16</div>
+  </div>
+  <div style="background:#e3e3e3;">
+    <div class="mar-x-32" style="background:#b3b3b3;">.mar-x-32</div>
+  </div>
+  <div style="background:#e3e3e3;">
+    <div class="mar-y-8" style="background:#b3b3b3;">.mar-y-8</div>
+  </div>
+  <div style="background:#e3e3e3;">
+    <div class="mar-t-24 mar-b-24" style="background:#b3b3b3;">.mar-t-24 .mar-b-24</div>
+  </div>
+</div>
+
+<h2>Escala de Tamanhos</h2>
+<p>Exemplo dos principais valores disponíveis:</p>
+<table>
+  <tr><th>Classe</th><th>Valor</th></tr>
+  <tr><td><code>2</code></td><td>0.125rem</td></tr>
+  <tr><td><code>4</code></td><td>0.25rem</td></tr>
+  <tr><td><code>8</code></td><td>0.5rem</td></tr>
+  <tr><td><code>16</code></td><td>1rem</td></tr>
+  <tr><td><code>24</code></td><td>1.5rem</td></tr>
+  <tr><td><code>32</code></td><td>2rem</td></tr>
+  <tr><td><code>48</code></td><td>3rem</td></tr>
+  <tr><td><code>80</code></td><td>5rem</td></tr>
+</table>
+
+<hr/>
+<p style="font-size:0.95em;color:#888;">Consulte o arquivo <code>styles/scss/_tc-rev-sizes.scss</code> para detalhes técnicos e manutenção.</p>
