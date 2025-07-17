@@ -1,4 +1,4 @@
-<h1>Documentação de Tipografia v2</h1>
+<h1>Documentação de Tipografia</h1>
 <p>Esta página demonstra as classes de tipografia disponíveis em <code>_tc-rev-typography.scss</code>.</p>
 
 <h2>Tamanhos de Fonte</h2>
@@ -13,6 +13,9 @@
   <div><span class="class-label">.f-size-48</span> <span class="f-size-48">Exemplo de texto 48px</span></div>
   <div><span class="class-label">.f-size-64</span> <span class="f-size-64">Exemplo de texto 64px</span></div>
 </div>
+<pre><code>&lt;span class="f-size-24"&gt;Texto 24px&lt;/span&gt;
+&lt;span class="f-size-48"&gt;Texto 48px&lt;/span&gt;</code></pre>
+
 <h3>Atalhos semânticos</h3>
 <div class="demo-block">
   <div><span class="class-label">.f-sm</span> <span class="f-sm">Texto pequeno</span></div>
@@ -25,6 +28,8 @@
   <div><span class="class-label">.f-d-md</span> <span class="f-d-md">Display médio</span></div>
   <div><span class="class-label">.f-d-lg</span> <span class="f-d-lg">Display grande</span></div>
 </div>
+<pre><code>&lt;span class="f-h1"&gt;Título Principal&lt;/span&gt;
+&lt;span class="f-sm"&gt;Texto pequeno&lt;/span&gt;</code></pre>
 
 <h2>Pesos de Fonte</h2>
 <div class="demo-block">
@@ -40,11 +45,14 @@
   <div><span class="class-label">.f-weight-semibold</span> <span class="f-weight-semibold weight-demo">Peso SemiBold (alias 700)</span></div>
   <div><span class="class-label">.f-weight-black</span> <span class="f-weight-black weight-demo">Peso Black (alias 900)</span></div>
 </div>
+<pre><code>&lt;span class="f-weight-700"&gt;Texto em negrito&lt;/span&gt;
+&lt;span class="f-weight-light"&gt;Texto leve&lt;/span&gt;</code></pre>
 
 <h2>Família de Fonte</h2>
 <div class="demo-block">
   <div><span class="class-label">.f-family</span> <span class="f-family">Exemplo usando a família Nunito Sans</span></div>
 </div>
+<pre><code>&lt;span class="f-family"&gt;Texto com Nunito Sans&lt;/span&gt;</code></pre>
 
 <h2>Ellipsis (Texto truncado)</h2>
 <div class="demo-block">
@@ -73,6 +81,9 @@
     </span>
   </div>
 </div>
+<pre><code>&lt;span class="text-ellipsis-2-lines" style="width:200px; display:block;"&gt;
+  Texto longo que será truncado após duas linhas...
+&lt;/span&gt;</code></pre>
 
 <hr/>
 <p style="font-size:0.95em;color:#888;">Consulte o arquivo <code>styles/scss/_tc-rev-typography.scss</code> para detalhes técnicos e manutenção.</p>
