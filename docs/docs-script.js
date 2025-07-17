@@ -1,10 +1,10 @@
 const sectionFiles = {
   tipografia: 'section-tipografia.html',
-  // tamanhos: 'section-tamanhos.html',
-  // bordas: 'section-bordas.html',
-  // cores: 'section-cores.html',
-  // sombras: 'section-sombras.html',
-  // temas: 'section-temas.html',
+  tamanhos: 'section-tamanhos.html',
+  bordas: 'section-bordas.html',
+  cores: 'section-cores.html',
+  sombras: 'section-sombras.html',
+  temas: 'section-temas.html',
 };
 
 function loadSectionContent(id, file) {
