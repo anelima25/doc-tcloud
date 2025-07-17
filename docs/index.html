@@ -19,17 +19,19 @@
           <li><button id="btn-cores" onclick="showSection('cores')">Cores</button></li>
           <li><button id="btn-sombras" onclick="showSection('sombras')">Sombras</button></li>
           <li><button id="btn-temas" onclick="showSection('temas')">Temas</button></li>
-        </ul>
-      </nav>
-      <main class="main-content">
-        <li>
+          <li>
             <button type="button" class="has-submenu" onclick="this.classList.toggle('open')">Componentes ▼</button>
             <ul class="submenu">
               <li><button id="btn-componente-botao" onclick="showSection('componente-botao')">Botão</button></li>
               <li><button id="btn-componente-input" onclick="showSection('componente-input')">Input</button></li>
-              <li><button id="btn-componente-card" onclick="showSection('componente-card')">Card</button></li>
+              <li><button id="btn-componente-card" onclick="showSection('componente-tab-item')">Tab item</button></li>
+              <li><button id="btn-componente-card" onclick="showSection('componente-table')">Table</button></li>
+              <li><button id="btn-componente-card" onclick="showSection('componente-util')">Util</button></li>
             </ul>
-        </li>
+          </li>
+        </ul>
+      </nav>
+      <main class="main-content">
         <section id="tipografia" class="active"></section>
         <section id="tamanhos"></section>
         <section id="bordas"></section>
