@@ -30,3 +30,10 @@ function showSection(id) {
 window.onload = function() {
   showSection('tipografia');
 }; 
+
+function copyCode(btn) {
+  const code = btn.parentElement.querySelector('code').innerText;
+  navigator.clipboard.writeText(code);
+  btn.innerText = '✔️';
+  setTimeout(() => btn.innerText = '📋', 1200);
+}
