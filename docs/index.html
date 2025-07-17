@@ -6,17 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/tc-rev-styles.css">
     <link rel="stylesheet" href="docs-style.css">
-    <script>
-      function showSection(id) {
-        document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        document.querySelectorAll('.menu button').forEach(btn => btn.classList.remove('active'));
-        document.getElementById('btn-' + id).classList.add('active');
-      }
-      window.onload = function() {
-        showSection('tipografia');
-      };
-    </script>
+    <script src="docs-script.js"></script>
   </head>
   <body>
     <div class="container">
