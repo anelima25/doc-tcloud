@@ -1,0 +1,25 @@
+@use 'sass:map';
+
+:root 
+{
+    --shadow-xs: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-sm: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+$shadow-classes:
+  ("name": "shadow-xs", "size": var(--shadow-xs)),
+  ("name": "shadow-sm", "size": var(--shadow-sm)),
+  ("name": "shadow-md", "size": var(--shadow-md)),
+  ("name": "shadow-lg", "size": var(--shadow-lg)),
+  ("name": "shadow-xl", "size": var(--shadow-xl));
+
+@each $shadow in $shadow-classes
+{
+    .#{map.get($shadow, 'name')}
+    {
+        box-shadow: map.get($shadow, 'size');
+    }
+}

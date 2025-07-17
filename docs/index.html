@@ -2,8 +2,96 @@
 <html>
   <head>
     <title>TOTVS - TCloud Docs</title>
+    <meta charset="UTF-8">
+    <style>
+      body { font-family: 'Nunito Sans', sans-serif; margin: 32px; background: #fafbfc; color: #222; }
+      h1, h2, h3 { margin-top: 2em; }
+      .demo-block { margin-bottom: 1.5em; padding: 1em; background: #fff; border-radius: 8px; box-shadow: 0 1px 4px #0001; }
+      .class-label { display: inline-block; min-width: 120px; font-size: 0.95em; color: #555; font-family: monospace; }
+      .ellipsis-demo { width: 300px; background: #f3f3f3; padding: 0.5em; border-radius: 4px; }
+      .weight-demo { letter-spacing: 1px; }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/scss/tc-rev-styles.scss">
   </head>
   <body>
-    <p>Teste</p>
+    <h1>Documentação de Tipografia</h1>
+    <p>Esta página demonstra as classes de tipografia disponíveis em <code>_tc-rev-typography.scss</code>.</p>
+
+    <h2>Tamanhos de Fonte</h2>
+    <div class="demo-block">
+      <div><span class="class-label">.f-size-12</span> <span class="f-size-12">Exemplo de texto 12px</span></div>
+      <div><span class="class-label">.f-size-14</span> <span class="f-size-14">Exemplo de texto 14px</span></div>
+      <div><span class="class-label">.f-size-16</span> <span class="f-size-16">Exemplo de texto 16px</span></div>
+      <div><span class="class-label">.f-size-18</span> <span class="f-size-18">Exemplo de texto 18px</span></div>
+      <div><span class="class-label">.f-size-20</span> <span class="f-size-20">Exemplo de texto 20px</span></div>
+      <div><span class="class-label">.f-size-24</span> <span class="f-size-24">Exemplo de texto 24px</span></div>
+      <div><span class="class-label">.f-size-32</span> <span class="f-size-32">Exemplo de texto 32px</span></div>
+      <div><span class="class-label">.f-size-48</span> <span class="f-size-48">Exemplo de texto 48px</span></div>
+      <div><span class="class-label">.f-size-64</span> <span class="f-size-64">Exemplo de texto 64px</span></div>
+    </div>
+    <h3>Atalhos semânticos</h3>
+    <div class="demo-block">
+      <div><span class="class-label">.f-sm</span> <span class="f-sm">Texto pequeno</span></div>
+      <div><span class="class-label">.f-md</span> <span class="f-md">Texto médio</span></div>
+      <div><span class="class-label">.f-lg</span> <span class="f-lg">Texto grande</span></div>
+      <div><span class="class-label">.f-h3</span> <span class="f-h3">Título H3</span></div>
+      <div><span class="class-label">.f-h2</span> <span class="f-h2">Título H2</span></div>
+      <div><span class="class-label">.f-h1</span> <span class="f-h1">Título H1</span></div>
+      <div><span class="class-label">.f-d-sm</span> <span class="f-d-sm">Display pequeno</span></div>
+      <div><span class="class-label">.f-d-md</span> <span class="f-d-md">Display médio</span></div>
+      <div><span class="class-label">.f-d-lg</span> <span class="f-d-lg">Display grande</span></div>
+    </div>
+
+    <h2>Pesos de Fonte</h2>
+    <div class="demo-block">
+      <div><span class="class-label">.f-weight-300</span> <span class="f-weight-300 weight-demo">Peso 300 (Light)</span></div>
+      <div><span class="class-label">.f-weight-400</span> <span class="f-weight-400 weight-demo">Peso 400 (Regular)</span></div>
+      <div><span class="class-label">.f-weight-500</span> <span class="f-weight-500 weight-demo">Peso 500 (Medium)</span></div>
+      <div><span class="class-label">.f-weight-600</span> <span class="f-weight-600 weight-demo">Peso 600 (SemiBold)</span></div>
+      <div><span class="class-label">.f-weight-700</span> <span class="f-weight-700 weight-demo">Peso 700 (Bold)</span></div>
+      <div><span class="class-label">.f-weight-800</span> <span class="f-weight-800 weight-demo">Peso 800 (ExtraBold)</span></div>
+      <div><span class="class-label">.f-weight-900</span> <span class="f-weight-900 weight-demo">Peso 900 (Black)</span></div>
+      <div><span class="class-label">.f-weight-light</span> <span class="f-weight-light weight-demo">Peso Light (alias 300)</span></div>
+      <div><span class="class-label">.f-weight-regular</span> <span class="f-weight-regular weight-demo">Peso Regular (alias 400)</span></div>
+      <div><span class="class-label">.f-weight-semibold</span> <span class="f-weight-semibold weight-demo">Peso SemiBold (alias 700)</span></div>
+      <div><span class="class-label">.f-weight-black</span> <span class="f-weight-black weight-demo">Peso Black (alias 900)</span></div>
+    </div>
+
+    <h2>Família de Fonte</h2>
+    <div class="demo-block">
+      <div><span class="class-label">.f-family</span> <span class="f-family">Exemplo usando a família Nunito Sans</span></div>
+    </div>
+
+    <h2>Ellipsis (Texto truncado)</h2>
+    <div class="demo-block">
+      <div>
+        <span class="class-label">.text-ellipsis-2-lines</span>
+        <span class="ellipsis-demo text-ellipsis-2-lines">
+          Este é um exemplo de texto muito longo que será truncado após duas linhas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac neque nec urna dictum.
+        </span>
+      </div>
+      <div>
+        <span class="class-label">.text-ellipsis-3-lines</span>
+        <span class="ellipsis-demo text-ellipsis-3-lines">
+          Este é um exemplo de texto muito longo que será truncado após três linhas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac neque nec urna dictum. Pellentesque habitant morbi tristique senectus et netus.
+        </span>
+      </div>
+      <div>
+        <span class="class-label">.text-ellipsis-4-lines</span>
+        <span class="ellipsis-demo text-ellipsis-4-lines">
+          Este é um exemplo de texto muito longo que será truncado após quatro linhas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac neque nec urna dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </span>
+      </div>
+      <div>
+        <span class="class-label">.text-ellipsis-5-lines</span>
+        <span class="ellipsis-demo text-ellipsis-5-lines">
+          Este é um exemplo de texto muito longo que será truncado após cinco linhas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac neque nec urna dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+        </span>
+      </div>
+    </div>
+
+    <hr/>
+    <p style="font-size:0.95em;color:#888;">Consulte o arquivo <code>styles/scss/_tc-rev-typography.scss</code> para detalhes técnicos e manutenção.</p>
   </body>
 </html>

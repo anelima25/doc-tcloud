@@ -1,0 +1,292 @@
+.tc-rev-input-control
+{
+    border: 1px solid var(--c-neutral-400);
+    border-radius: var(--bor-radius-pill);
+    color: var(--c-neutral-900);
+    display: inline-block;
+    font-family: var(--f-family);
+    font-size: var(--f-size-14);
+    line-height: var(--l-height-20);
+    outline: none;
+    height: var(--size-40);
+    transition: 200ms ease;
+    padding: 0 var(--size-16);
+
+    &:hover, &:focus
+    {
+        border-color: var(--c-primary-500);
+    }
+}
+
+.tc-rev-input-label
+{
+  font-family: var(--f-family);
+  font-size: var(--f-size-14);
+  font-weight: var(--f-weight-600);
+  color: var(--c-neutral-900);
+  line-height: var(--l-height-20);
+  margin: 0;
+}
+
+.tc-rev-search-input-container
+{
+  position: relative;
+  max-height: var(--size-40);
+  min-height: var(--size-40);
+  height: var(--size-40);
+  min-width: 7.5rem;
+
+  .tc-rev-search-input-control
+  {
+    border: 1px solid var(--c-neutral-400);
+    border-radius: var(--bor-radius-pill);
+    color: var(--c-neutral-900);
+    display: inline-block;
+    font-family: var(--f-family);
+    font-size: var(--f-size-14);
+    line-height: var(--l-height-20);
+    outline: none;
+    height: var(--size-40);
+    transition: 200ms ease;
+    padding: 0 var(--size-16);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: var(--size-44);
+    width: 100%;
+    z-index: 1;
+
+    &:hover, &:focus
+    {
+        border-color: var(--c-primary-500);
+    }
+  }
+
+  .tc-rev-search-input-btn
+  {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    z-index: 2;
+    font-size: var(--f-size-16);
+    background-color: var(--c-primary-500);
+    border-radius: var(--bor-radius-rounded); 
+    border: none;
+    width: var(--size-32);
+    height: var(--size-32);
+    color: var(--c-neutral-50);
+    font-size: var(--f-size-16);
+  }  
+}
+
+.tc-rev-input-icon-container
+{
+  position: relative;
+  max-height: var(--size-40);
+  min-height: var(--size-40);
+  height: var(--size-40);
+  min-width: 7.5rem;
+
+  .tc-rev-input-icon-control
+  {
+    border: 1px solid var(--c-neutral-400);
+    border-radius: var(--bor-radius-pill);
+    color: var(--c-neutral-900);
+    display: inline-block;
+    font-family: var(--f-family);
+    font-size: var(--f-size-14);
+    line-height: var(--l-height-20);
+    outline: none;
+    height: var(--size-40);
+    transition: 200ms ease;
+    padding: 0 var(--size-16);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: var(--size-44);
+    width: 100%;
+    z-index: 1;
+
+    &:hover, &:focus
+    {
+        border-color: var(--c-primary-500);
+    }
+  }
+
+  .tc-rev-input-icon
+  {
+    align-content: center;
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    z-index: 2;
+    font-size: var(--f-size-16);
+    width: var(--size-32);
+    height: var(--size-32);
+    text-align: center;
+  }  
+}
+
+
+// RESET RADIO INPUT START
+input[type=radio].tc-rev-input-control {
+  position: initial;
+  margin: initial;
+
+  &:after, &:before {
+    content: '';
+    position: initial;
+    border-radius: initial;
+    background: initial;
+    z-index: initial;
+  }
+
+  &:after {
+    height: initial;
+    width: initial;
+    left: initial;
+    margin: initial;
+    border: initial;
+  }
+
+  &:checked:before {
+    background: initial;
+    height: initial;
+    width: initial;
+    margin: initial;
+    z-index: initial;
+  }
+}
+// RESET RADIO INPUT END
+
+input[type="radio"].tc-rev-input-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: var(--size-20);
+  height: var(--size-20);
+  min-width: var(--size-20);
+  min-height: var(--size-20);
+  border: 1px solid var(--c-neutral-900);
+  border-radius: var(--bor-radius-rounded);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  &:checked  {
+    border: 1px solid var(--c-primary-500);
+  }
+
+  &:checked::before  {
+    content: '';
+    background-color: var(--c-primary-500);
+    border-radius: var(--bor-radius-rounded);
+    left: 50%;
+    height: var(--size-14);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--size-14);
+  }
+}
+
+input[type=checkbox].tc-rev-input-checkbox {
+  position: initial;
+  margin: initial;
+
+  &:after, &:before {
+    content: '';
+    position: initial;
+    border-radius: initial;
+    background: initial;
+    z-index: initial;
+  }
+
+  &:after {
+    height: initial;
+    width: initial;
+    left: initial;
+    margin: initial;
+    border: initial;
+  }
+
+  &:checked:before {
+    background: initial;
+    height: initial;
+    width: initial;
+    margin: initial;
+    z-index: initial;
+
+    left: initial;
+    top: initial;
+    border: initial; 
+    border-width: initial;
+    transform: initial;
+  }
+}
+
+input[type=checkbox].tc-rev-input-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--c-neutral-900);
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background: var(--c-neutral-50);
+    transition: background 0.2s, border-color 0.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 14px;
+    height: 10px;
+    background: none;
+    mask: none;
+    -webkit-mask: none;
+    pointer-events: none;
+    z-index: 2;
+    transition: background 0.2s;
+  }
+
+  &:checked {
+    border-color: var(--c-primary-500);
+    background: var(--c-primary-500);
+  }
+
+  &:checked::before {
+    background: var(--c-primary-500);
+  }
+
+  &:checked::after {
+    background: #fff;
+    mask: url('data:image/svg+xml;utf8,<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/contain;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center/contain;
+  }
+}

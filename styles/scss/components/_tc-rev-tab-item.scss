@@ -1,0 +1,39 @@
+.tc-rev-tab-item
+{
+    background-color: var(--c-neutral-50);
+    border: var(--bor-size-1) solid var(--c-neutral-400);
+    border-radius: var(--bor-radius-8);
+    color: var(--c-neutral-900);
+    cursor: pointer;
+    font-size: var(--f-size-14);
+    height: var(--size-40);
+    line-height: var(--l-height-20);
+    padding: 0 var(--size-16);
+    text-wrap: nowrap;
+    transition: all 200ms ease;
+
+    &:hover, &:focus
+    {
+        background-color: var(--c-neutral-200);
+        border-color: var(--c-neutral-200);
+        color: var(--c-primary-500);
+        font-weight: 600;
+    }
+
+    &:active, &.selected, &.active
+    {
+        background-color: var(--c-primary-300);
+        border-color: var(--c-primary-500);
+        color: var(--c-primary-500);
+        font-weight: 700;
+    }
+
+    &:disabled
+    {
+        background-color: var(--c-neutral-50);
+        border-color: var(--c-neutral-50);
+        color: var(--c-neutral-400);
+        cursor: not-allowed;
+        font-weight: var(--f-weight-400);
+    }
+}

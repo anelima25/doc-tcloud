@@ -1,0 +1,93 @@
+@use 'sass:map';
+
+:root
+{
+    --bor-radius-0: 0px;
+    --bor-radius-4: 4px;
+    --bor-radius-8: 8px;
+    --bor-radius-16: 16px;
+    --bor-radius-24: 24px;
+    --bor-radius-32: 32px;
+    --bor-radius-rounded: 50%;
+    --bor-radius-pill: 2000px;
+    --bor-size-none: 0;
+    --bor-size-xs: 1px;
+    --bor-size-sm: 1.5px;
+    --bor-size-md: 2px;
+    --bor-size-lg: 2.5px;
+    --bor-size-xl: 3px;
+    --bor-size-1: 1px;
+    --bor-size-2: 2px;
+    --bor-size-3: 3px;
+    --bor-style-solid: solid;
+    --bor-style-dashed: dashed;
+}
+
+$borders-config: (
+  "rad": (
+    "4": var(--bor-radius-4),
+    "8": var(--bor-radius-8),
+    "16": var(--bor-radius-16),
+    "24": var(--bor-radius-24),
+    "32": var(--bor-radius-32),
+    "none": var(--bor-radius-0),
+    "xs": var(--bor-radius-4),
+    "sm": var(--bor-radius-8),
+    "md": var(--bor-radius-16),
+    "lg": var(--bor-radius-24),
+    "xl": var(--bor-radius-32),
+    "pill": var(--bor-radius-pill),
+    "rounded": (var(--bor-radius-rounded))
+  ),
+  "width": (
+    "none": var(--bor-size-none),
+    "xs": var(--bor-size-xs),
+    "sm": var(--bor-size-sm),
+    "md": var(--bor-size-md),
+    "lg": var(--bor-size-lg),
+    "xl": var(--bor-size-xl),
+    "1": var(--bor-size-1),
+    "2": var(--bor-size-2),
+    "3": var(--bor-size-3)
+  )
+);
+
+@each $type, $values in $borders-config {
+  @each $name, $value in $values {
+    @if $type == "rad" {
+      .bor-#{$type}-#{$name} {
+        border-radius: $value;
+      }
+    } @else if $type == "width" {
+      .bor-#{$name} {
+        border-width: $value;
+        border-style: var(--bor-style-solid);
+      }
+
+      .bor-l-#{$name} {
+        border-left-width: $value;
+        border-style: var(--bor-style-solid);
+      }
+
+      .bor-t-#{$name} {
+        border-top-width: $value;
+        border-style: var(--bor-style-solid);
+      }
+
+      .bor-r-#{$name} {
+        border-right-width: $value;
+        border-style: var(--bor-style-solid);
+      }
+
+      .bor-b-#{$name} {
+        border-bottom-width: $value;
+        border-style: var(--bor-style-solid);
+      }
+    }
+  }
+}
+
+.bor-dashed
+{
+    border-style: dashed;
+}

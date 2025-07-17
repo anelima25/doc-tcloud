@@ -1,0 +1,57 @@
+@use 'sass:map';
+
+.tc-rev-table
+{
+    width: 100%;
+
+    thead
+    {
+        th
+        {
+            padding: 1rem;
+            box-sizing: border-box;
+            background-color: #F2F6F9;
+            border-bottom: 1px solid var(--c-neutral-400);
+
+            &.center
+            {
+                text-align: center;
+            }
+
+            &.right
+            {
+                text-align: right;
+            }
+
+            $radius-table: 0.5rem;
+            &:last-child { border-radius: 0 $radius-table 0 0; }
+            &:first-child { border-radius: $radius-table 0 0 0; }
+        }
+    }
+
+    tbody
+    {
+        tr
+        {
+            background-color: transparent;
+            
+            td
+            {
+                padding: 0.5625rem 1rem;
+                box-sizing: border-box;
+                background-color: transparent;
+                border-bottom: 1px solid var(--c-neutral-400);
+
+                &.center
+                {
+                    text-align: center;
+                }
+
+                &.right
+                {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

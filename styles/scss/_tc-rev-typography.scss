@@ -1,0 +1,122 @@
+@use 'sass:map';
+
+:root
+{
+    --f-family: 'Nunito Sans', sans-serif;
+    --f-size-12: 0.75rem;
+    --f-size-14: 0.875rem;
+    --f-size-16: 1rem;
+    --f-size-18: 1.125rem;
+    --f-size-20: 1.25rem;
+    --f-size-24: 1.5rem;
+    --f-size-32: 2rem;
+    --f-size-48: 3rem;
+    --f-size-56: 4rem;
+    --f-size-64: 4rem;
+
+    --l-height-16: 1.33;
+    --l-height-20: 1.43;
+    --l-height-24: 1.5;
+    --l-height-26: 1.44;
+    --l-height-28: 1.4;
+    --l-height-32: 1.33;
+    --l-height-40: 1.25;
+    --l-height-56: 1.16;
+    --l-height-64: 1.14;
+
+    --f-weight-300: 300;
+    --f-weight-400: 400;
+    --f-weight-500: 500;
+    --f-weight-600: 600;
+    --f-weight-700: 700;
+    --f-weight-800: 800;
+    --f-weight-900: 900;
+    --f-weight-light: 300;
+    --f-weight-regular: 400;
+    --f-weight-semibold: 700;
+    --f-weight-black: 900;
+
+    --f-display-lg: var(--l-height-64) / var(--f-size-56);
+    --f-display-md: var(--l-height-56) / var(--f-size-48);
+    --f-display-sm: var(--l-height-40) / var(--f-size-32);
+    --f-h1: var(--l-height-32) / var(--f-size-24);
+    --f-h2: var(--l-height-28) / var(--f-size-20);
+    --f-h3: var(--l-height-26) / var(--f-size-20);
+    --f-lg: var(--l-height-24) / var(--f-size-16);
+    --f-md: var(--l-height-20) / var(--f-size-14);
+    --f-sm: var(--l-height-16) / var(--f-size-12);
+}
+
+
+$font-classes:
+  ("name": "f-size-12", "size": var(--f-size-12), "line-height": var(--l-height-16)),
+  ("name": "f-size-14", "size": var(--f-size-14), "line-height": var(--l-height-20)),
+  ("name": "f-size-16", "size": var(--f-size-16), "line-height": var(--l-height-24)),
+  ("name": "f-size-18", "size": var(--f-size-18), "line-height": var(--l-height-26)),
+  ("name": "f-size-20", "size": var(--f-size-20), "line-height": var(--l-height-28)),
+  ("name": "f-size-24", "size": var(--f-size-24), "line-height": var(--l-height-32)),
+  ("name": "f-size-32", "size": var(--f-size-32), "line-height": var(--l-height-40)),
+  ("name": "f-size-48", "size": var(--f-size-48), "line-height": var(--l-height-56)),
+  ("name": "f-size-64", "size": var(--f-size-64), "line-height": var(--l-height-64)),
+  ("name": "f-sm",   "size": var(--f-size-12), "line-height": var(--l-height-16)),
+  ("name": "f-md",   "size": var(--f-size-14), "line-height": var(--l-height-20)),
+  ("name": "f-lg",   "size": var(--f-size-16), "line-height": var(--l-height-24)),
+  ("name": "f-h3",   "size": var(--f-size-18), "line-height": var(--l-height-26)),
+  ("name": "f-h2",   "size": var(--f-size-20), "line-height": var(--l-height-28)),
+  ("name": "f-h1",   "size": var(--f-size-24), "line-height": var(--l-height-32)),
+  ("name": "f-d-sm", "size": var(--f-size-32), "line-height": var(--l-height-40)),
+  ("name": "f-d-md", "size": var(--f-size-48), "line-height": var(--l-height-56)),
+  ("name": "f-d-lg", "size": var(--f-size-64), "line-height": var(--l-height-64));
+
+@each $font in $font-classes
+{
+    .#{map.get($font, 'name')}
+    {
+        font-size: map.get($font, 'size');
+        line-height: map.get($font, 'line-height');
+    }
+}
+
+$font-weight:
+  ("name": "f-weight-300", "weight": 300),
+  ("name": "f-weight-400", "weight": 400),
+  ("name": "f-weight-500", "weight": 500),
+  ("name": "f-weight-600", "weight": 600),
+  ("name": "f-weight-700", "weight": 700),
+  ("name": "f-weight-800", "weight": 800),
+  ("name": "f-weight-900", "weight": 900),
+  ("name": "f-weight-light", "weight": 300),
+  ("name": "f-weight-regular", "weight": 400),
+  ("name": "f-weight-semibold", "weight": 700),
+  ("name": "f-weight-black", "weight": 900);
+  
+@each $font in $font-weight
+{
+    .#{map.get($font, 'name')}
+    {
+        font-weight: map.get($font, 'weight');
+    }
+}
+
+.f-family
+{
+    font-family: var(--f-family);
+}
+
+$el-lines:
+  ("line": 2),
+  ("line": 3),
+  ("line": 4),
+  ("line": 5);
+
+@each $line in $el-lines
+{
+    .text-ellipsis-#{map.get($line, 'line')}-lines
+    {
+        display: -webkit-box;
+        -webkit-line-clamp: map.get($line, 'line');
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

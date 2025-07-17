@@ -1,0 +1,25 @@
+@use './tc-rev-themes';
+@use './tc-rev-colors';
+@use './tc-rev-border';
+@use './tc-rev-shadow';
+@use './tc-rev-sizes';
+@use './tc-rev-typography';
+@use './components/tc-rev-table';
+@use './components/tc-rev-button';
+@use './components/tc-rev-input-control';
+@use './components/tc-rev-tab-item';
+@use './components/tc-rev-util';
+
+// Opinion (e.g., “silly,” “smart,” “pretty”)
+// Size (e.g., “small,” “huge,” “tall”)
+// Physical quality (e.g., “ragged,” “neat,” “muscular”)
+// Age or shape (e.g., “old,” “round,” “young”)
+// Color (e.g., “scarlet,” “purplish,” “graying”)
+// Origin or religion (e.g., “Polish,” “animist,” “Southern”)
+// Material (e.g., “pearl,” “iron,” “nylon”)
+// Type (e.g., “electric,” “two-sided,” “pick-up”)
+// Purpose (e.g., “welding,” “polishing,” “sports”)
+
+.power-bi-container .report-container{
+  height: 1200px;;
+}

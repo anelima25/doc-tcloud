@@ -1,0 +1,172 @@
+@use 'sass:map';
+
+.tc-rev-btn--sm
+{
+  align-items: center;
+  border-color: transparent;
+  border-width: var(--bor-size-xs);
+  border-style: solid;
+  border-radius: var(--bor-radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--f-size-14);
+  font-weight: var(--f-weight-600);
+  gap: var(--size-8);
+  justify-content: center;
+  line-height: var(--l-height-24);
+  height: var(--size-38);
+  max-height: var(--size-38);
+  min-height: var(--size-38);
+  padding: 0 var(--size-8);
+  transition: all 200ms ease;
+}
+
+.tc-rev-btn--md
+{
+  align-items: center;
+  border-color: transparent;
+  border-width: var(--bor-size-xs);
+  border-style: solid;
+  border-radius: var(--bor-radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--f-size-16);
+  font-weight: var(--f-weight-600);
+  gap: var(--size-8);
+  justify-content: center;
+  line-height: var(--l-height-24);
+  height: var(--size-58);
+  max-height: var(--size-58);
+  min-height: var(--size-58);
+  padding: 0 var(--size-16);
+  transition: all 200ms ease;
+}
+
+.tc-rev-btn--lg
+{
+  align-items: center;
+  border-color: transparent;
+  border-width: var(--bor-size-xs);
+  border-style: solid;
+  border-radius: var(--bor-radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: var(--f-size-16);
+  font-weight: var(--f-weight-600);
+  height: var(--size-74);
+  gap: var(--size-8);
+  justify-content: center;
+  line-height: var(--l-height-24);
+  max-height: var(--size-74);
+  min-height: var(--size-74);
+  padding: 0 var(--size-24);
+  transition: all 200ms ease;
+}
+
+$btn-by-colors:
+  ("class": "tc-rev-btn--primary-filled", "b-color": var(--c-primary-500), "bg-color": var(--c-primary-500), "color": var(--c-neutral-50), "bg-hover": var(--c-primary-600)),
+  ("class": "tc-rev-btn--light-filled", "b-color": var(--c-neutral-50), "bg-color": var(--c-neutral-50), "color": var(--c-primary-500), "bg-hover": var(--c-neutral-50)),
+  ("class": "tc-rev-btn--dark-filled", "b-color": var(--c-neutral-900), "bg-color": var(--c-neutral-900), "color": var(--c-neutral-50), "bg-hover": var(--c-neutral-600)),
+  ("class": "tc-rev-btn--danger-filled", "b-color": var(--c-danger-500), "bg-color": var(--c-danger-500), "color": var(--c-neutral-50), "bg-hover": var(--c-danger-500));
+
+@each $btn-color in $btn-by-colors
+{
+  .#{map.get($btn-color, 'class')}
+  {
+    background-color: map.get($btn-color, 'bg-color');
+    color: map.get($btn-color, 'color');
+
+    &:focus
+    {
+      background-color: map.get($btn-color, 'bg-color');
+      color: map.get($btn-color, 'color');
+    }
+
+    &:hover 
+    {
+      background-color: map.get($btn-color, 'bg-hover');
+      color: map.get($btn-color, 'color');
+    }
+
+    &:disabled
+    {
+      background-color: var(--c-neutral-300);
+      color: var(--c-neutral-600);
+      cursor: not-allowed;
+    }
+  }
+}
+
+$btn-by-colors-by-outline:
+  ("class": "tc-rev-btn--primary-outline", "b-color": var(--c-primary-500), "bg-color": transparent, "color": var(--c-primary-500), "bg-hover": var(--c-neutral-50), "c-hover": var(--c-primary-500), "b-color-hover": var(--c-primary-500)),
+  ("class": "tc-rev-btn--light-outline", "b-color": var(--c-neutral-50), "bg-color": transparent, "color": var(--c-neutral-50), "bg-hover": transparent, "c-hover": var(--c-neutral-50), "b-color-hover": var(--c-neutral-50)),
+  ("class": "tc-rev-btn--dark-outline", "b-color": var(--c-neutral-900), "bg-color": transparent, "color": var(--c-neutral-900), "bg-hover": var(--c-neutral-500), "c-hover": var(--c-neutral-50), "b-color-hover": var(--c-neutral-700)),
+  ("class": "tc-rev-btn--danger-outline", "b-color": var(--c-danger-500), "bg-color": transparent, "color": var(--c-danger-500), "bg-hover": var(--c-danger-300), "c-hover": var(--c-danger-500), "b-color-hover": var(--c-danger-500));
+
+@each $btn-color in $btn-by-colors-by-outline
+{
+  .#{map.get($btn-color, 'class')}
+  {
+    background-color: map.get($btn-color, 'bg-color');
+    border-color: map.get($btn-color, 'b-color');
+    color: map.get($btn-color, 'color');
+
+    &:focus
+    {
+      background-color: map.get($btn-color, 'bg-color');
+      border-color: map.get($btn-color, 'b-color');
+      color: map.get($btn-color, 'color');
+    }
+
+    &:hover 
+    {
+      background-color: map.get($btn-color, 'bg-hover');
+      color: map.get($btn-color, 'c-hover');
+      border-color: map.get($btn-color, 'b-color-hover');
+    }
+
+    &:disabled
+    {
+      background-color: var(--c-neutral-300);
+      border-color: var(--c-neutral-300);
+      color: var(--c-neutral-600);
+      cursor: not-allowed;
+    }
+  }
+}
+
+$btn-by-colors-by-link:
+  ("class": "tc-rev-btn--primary-link", "color": var(--c-primary-500), "c-hover": var(--c-primary-700)),
+  ("class": "tc-rev-btn--light-link", "color": var(--c-neutral-50), "c-hover": var(--c-primary-500)),
+  ("class": "tc-rev-btn--dark-link", "color": var(--c-neutral-900), "c-hover": var(--c-neutral-500)),
+  ("class": "tc-rev-btn--danger-link", "color": var(--c-danger-500), "c-hover": var(--c-danger-400));
+
+@each $btn-color in $btn-by-colors-by-link
+{
+  .#{map.get($btn-color, 'class')}
+  {
+    background-color: transparent;
+    border-color: transparent;
+    color: map.get($btn-color, 'color');
+
+    &:focus
+    {
+      background-color: transparent;
+      border-color: transparent;
+      color: map.get($btn-color, 'color');
+    }
+
+    &:hover 
+    {
+      color: map.get($btn-color, 'c-hover');
+    }
+
+    &:disabled
+    {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--c-neutral-600);
+      cursor: not-allowed;
+    }
+  }
+}

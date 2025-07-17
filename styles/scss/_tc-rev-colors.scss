@@ -1,0 +1,74 @@
+@use 'sass:map';
+
+.bg-c-transparent
+{
+    background-color: transparent;
+}
+
+$colors: (
+  "neutral": (
+    "50": var(--c-neutral-50),
+    "100": var(--c-neutral-100),
+    "200": var(--c-neutral-200),
+    "300": var(--c-neutral-300),
+    "400": var(--c-neutral-400),
+    "500": var(--c-neutral-500),
+    "600": var(--c-neutral-600),
+    "700": var(--c-neutral-700),
+    "800": var(--c-neutral-800),
+    "900": var(--c-neutral-900)
+  ),
+  "primary": (
+    "300": var(--c-primary-300),
+    "400": var(--c-primary-400),
+    "500": var(--c-primary-500),
+    "600": var(--c-primary-600),
+    "700": var(--c-primary-700)
+  ),
+  "danger": (
+    "300": var(--c-danger-300),
+    "400": var(--c-danger-400),
+    "500": var(--c-danger-500)
+  ),
+  "alert": (
+    "300": var(--c-alert-300),
+    "400": var(--c-alert-400),
+    "500": var(--c-alert-500)
+  ),
+  "info": (
+    "300": var(--c-info-300),
+    "400": var(--c-info-400),
+    "500": var(--c-info-500)
+  ),
+  "success": (
+    "300": var(--c-success-300),
+    "400": var(--c-success-400),
+    "500": var(--c-success-500)
+  )
+);
+
+
+@each $color, $saturations in $colors {
+  @each $saturation, $value in $saturations {
+    .text-#{$color}-#{$saturation} {
+      color: $value;
+    }
+
+    .c-#{$color}-#{$saturation} {
+      color: $value;
+    }
+
+    .bg-#{$color}-#{$saturation} {
+      background-color: $value;
+    }
+
+    .bg-c-#{$color}-#{$saturation} {
+      background-color: $value;
+    }
+
+    .bor-c-#{$color}-#{$saturation} {
+      border-color: $value;
+    }
+  }
+}
+  
