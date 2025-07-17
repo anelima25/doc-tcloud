@@ -26,6 +26,55 @@ body { font-family: 'Nunito Sans', sans-serif; margin: 0; background: white; col
 }
 .menu li {
   margin-bottom: 0.5em;
+  position: relative;
+}
+.menu .has-submenu {
+  font-weight: 700;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 12px 32px;
+  color: #222;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.menu .has-submenu.open,
+.menu .has-submenu:hover {
+  background: #f0f4ff;
+  border-left: 4px solid #1a237e;
+  color: #1a237e;
+}
+.menu .submenu {
+  display: none;
+  list-style: none;
+  padding-left: 16px;
+  margin: 0;
+}
+.menu .has-submenu.open + .submenu {
+  display: block;
+}
+.menu .submenu li {
+  margin-bottom: 0;
+}
+.menu .submenu button {
+  font-weight: 400;
+  font-size: 0.97em;
+  padding: 8px 32px 8px 48px;
+  background: none;
+  border: none;
+  color: #444;
+  width: 100%;
+  text-align: left;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+.menu .submenu button.active,
+.menu .submenu button:hover {
+  background: #e8f0fe;
+  border-left: 4px solid #1a237e;
+  color: #1a237e;
 }
 .menu button {
   width: 100%;

@@ -22,6 +22,14 @@
         </ul>
       </nav>
       <main class="main-content">
+        <li>
+            <button type="button" class="has-submenu" onclick="this.classList.toggle('open')">Componentes ▼</button>
+            <ul class="submenu">
+              <li><button id="btn-componente-botao" onclick="showSection('componente-botao')">Botão</button></li>
+              <li><button id="btn-componente-input" onclick="showSection('componente-input')">Input</button></li>
+              <li><button id="btn-componente-card" onclick="showSection('componente-card')">Card</button></li>
+            </ul>
+        </li>
         <section id="tipografia" class="active"></section>
         <section id="tamanhos"></section>
         <section id="bordas"></section>
