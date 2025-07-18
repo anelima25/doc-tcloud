@@ -1,1 +1,69 @@
-<h1>Teste</h1>
+<h1>Botão - tc-rev-button</h1>
+<p>
+  O componente <strong>tc-rev-button</strong> oferece diferentes tamanhos e
+  variações de cor para atender às necessidades de interface do TCloud.
+</p>
+
+<h2>Tamanhos</h2>
+<ul>
+  <li><code>.tc-rev-btn--sm</code> — Pequeno</li>
+  <li><code>.tc-rev-btn--md</code> — Médio</li>
+  <li><code>.tc-rev-btn--lg</code> — Grande</li>
+</ul>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <button class="tc-rev-btn--sm tc-rev-btn--primary-filled">Pequeno</button>
+  <button class="tc-rev-btn--md tc-rev-btn--primary-filled">Médio</button>
+  <button class="tc-rev-btn--lg tc-rev-btn--primary-filled">Grande</button>
+</div>
+
+<h2>Variações de cor</h2>
+<h3>Filled</h3>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <button class="tc-rev-btn--md tc-rev-btn--primary-filled">Primary</button>
+  <button class="tc-rev-btn--md tc-rev-btn--light-filled">Light</button>
+  <button class="tc-rev-btn--md tc-rev-btn--dark-filled">Dark</button>
+  <button class="tc-rev-btn--md tc-rev-btn--danger-filled">Danger</button>
+</div>
+
+<h3>Outline</h3>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <button class="tc-rev-btn--md tc-rev-btn--primary-outline">Primary</button>
+  <button class="tc-rev-btn--md tc-rev-btn--light-outline">Light</button>
+  <button class="tc-rev-btn--md tc-rev-btn--dark-outline">Dark</button>
+  <button class="tc-rev-btn--md tc-rev-btn--danger-outline">Danger</button>
+</div>
+
+<h3>Link</h3>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <button class="tc-rev-btn--md tc-rev-btn--primary-link">Primary</button>
+  <button class="tc-rev-btn--md tc-rev-btn--light-link">Light</button>
+  <button class="tc-rev-btn--md tc-rev-btn--dark-link">Dark</button>
+  <button class="tc-rev-btn--md tc-rev-btn--danger-link">Danger</button>
+</div>
+
+<h2>Estados</h2>
+<ul>
+  <li><strong>Normal</strong>: Estado padrão do botão.</li>
+  <li>
+    <strong>Hover</strong>: Ao passar o mouse, a cor de fundo ou texto muda
+    conforme a variação.
+  </li>
+  <li>
+    <strong>Disabled</strong>: <code>disabled</code> desabilita o botão, altera
+    a cor e o cursor.
+  </li>
+</ul>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+  <button class="tc-rev-btn--md tc-rev-btn--primary-filled">Normal</button>
+  <button class="tc-rev-btn--md tc-rev-btn--primary-filled" disabled>
+    Disabled
+  </button>
+</div>
+
+<h2>Exemplo de uso</h2>
+<pre><code>&lt;button class="tc-rev-btn--md tc-rev-btn--primary-filled"&gt;Botão&lt;/button&gt;</code></pre>
+
+<h2>Combinações</h2>
+<p>Você pode combinar qualquer tamanho com qualquer variação de cor:</p>
+<pre><code>&lt;button class="tc-rev-btn--sm tc-rev-btn--danger-outline"&gt;Pequeno Danger Outline&lt;/button&gt;
+  &lt;button class="tc-rev-btn--lg tc-rev-btn--dark-link"&gt;Grande Dark Link&lt;/button&gt;</code></pre>
