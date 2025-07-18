@@ -1,1 +1,76 @@
-table
+<h1>Tabela - tc-rev-table</h1>
+<p>O componente <strong>tc-rev-table</strong> oferece uma tabela estilizada, com cabeçalho destacado, alinhamentos customizáveis e separação visual entre linhas.</p>
+
+<h2>Exemplo de uso</h2>
+<table class="tc-rev-table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th class="center">Idade</th>
+      <th class="right">Salário</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ana</td>
+      <td class="center">28</td>
+      <td class="right">R$ 5.000</td>
+    </tr>
+    <tr>
+      <td>Bruno</td>
+      <td class="center">34</td>
+      <td class="right">R$ 7.200</td>
+    </tr>
+    <tr>
+      <td>Carla</td>
+      <td class="center">25</td>
+      <td class="right">R$ 4.800</td>
+    </tr>
+  </tbody>
+</table>
+<pre><code>&lt;table class="tc-rev-table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th class="center"&gt;Idade&lt;/th&gt;
+      &lt;th class="right"&gt;Salário&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ana&lt;/td&gt;
+      &lt;td class="center"&gt;28&lt;/td&gt;
+      &lt;td class="right"&gt;R$ 5.000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bruno&lt;/td&gt;
+      &lt;td class="center"&gt;34&lt;/td&gt;
+      &lt;td class="right"&gt;R$ 7.200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Carla&lt;/td&gt;
+      &lt;td class="center"&gt;25&lt;/td&gt;
+      &lt;td class="right"&gt;R$ 4.800&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+<h2>Alinhamento de colunas</h2>
+<ul>
+  <li><code>.center</code>: Centraliza o conteúdo da célula.</li>
+  <li><code>.right</code>: Alinha o conteúdo à direita.</li>
+</ul>
+
+<h2>Características</h2>
+<ul>
+  <li>Cabeçalho com fundo destacado e cantos arredondados.</li>
+  <li>Separação visual entre linhas com borda inferior.</li>
+  <li>Compatível com responsividade (use <code>overflow-x: auto</code> no container se necessário).</li>
+</ul>
+
+<h2>Boas práticas</h2>
+<ul>
+  <li>Sempre utilize <code>&lt;thead&gt;</code> para o cabeçalho e <code>&lt;tbody&gt;</code> para o corpo da tabela.</li>
+  <li>Use as classes <code>center</code> e <code>right</code> para alinhar colunas conforme necessário.</li>
+  <li>Para tabelas grandes, utilize um container com <code>overflow-x: auto</code> para evitar quebra de layout em telas pequenas.</li>
+</ul>

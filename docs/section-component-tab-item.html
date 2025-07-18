@@ -1,1 +1,36 @@
-tab item
+<h1>Tab Item - tc-rev-tab-item</h1>
+<p>O componente <strong>tc-rev-tab-item</strong> é utilizado para criar abas (tabs) estilizadas, facilitando a navegação entre diferentes conteúdos em uma interface.</p>
+
+<h2>Exemplo de uso</h2>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+  <button class="tc-rev-tab-item active">Aba 1</button>
+  <button class="tc-rev-tab-item">Aba 2</button>
+  <button class="tc-rev-tab-item" disabled>Aba 3</button>
+</div>
+<pre><code>&lt;button class="tc-rev-tab-item active"&gt;Aba 1&lt;/button&gt;
+&lt;button class="tc-rev-tab-item"&gt;Aba 2&lt;/button&gt;
+&lt;button class="tc-rev-tab-item" disabled&gt;Aba 3&lt;/button&gt;</code></pre>
+
+<h2>Estados</h2>
+<ul>
+  <li><strong>Normal</strong>: Aba padrão, cor neutra.</li>
+  <li><strong>Hover/Focus</strong>: Fundo e borda ficam mais claros, texto azul.</li>
+  <li><strong>Active/Selected</strong>: Fundo azul claro, borda azul, texto azul e negrito.</li>
+  <li><strong>Disabled</strong>: Aba desabilitada, cor apagada e cursor não permitido.</li>
+</ul>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+  <button class="tc-rev-tab-item">Normal</button>
+  <button class="tc-rev-tab-item active">Active</button>
+  <button class="tc-rev-tab-item selected">Selected</button>
+  <button class="tc-rev-tab-item" disabled>Disabled</button>
+</div>
+
+<h2>Dicas de acessibilidade</h2>
+<ul>
+  <li>Use <code>role="tablist"</code> no container das abas e <code>role="tab"</code> nos botões para melhor acessibilidade.</li>
+  <li>Gerencie o foco e o atributo <code>aria-selected</code> para indicar a aba ativa.</li>
+</ul>
+<pre><code>&lt;div role="tablist"&gt;
+  &lt;button class="tc-rev-tab-item" role="tab" aria-selected="true"&gt;Aba 1&lt;/button&gt;
+  &lt;button class="tc-rev-tab-item" role="tab" aria-selected="false"&gt;Aba 2&lt;/button&gt;
+&lt;/div&gt;</code></pre>

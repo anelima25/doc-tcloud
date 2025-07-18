@@ -1,1 +1,51 @@
-input control
+<h1>Input - tc-rev-input-control</h1>
+<p>O componente <strong>tc-rev-input-control</strong> oferece estilos padronizados para campos de entrada de texto, busca, radio e checkbox, seguindo o padrão visual do TCloud.</p>
+
+<h2>Input padrão</h2>
+<label class="tc-rev-input-label" for="exemplo-input">Label do campo</label><br>
+<input id="exemplo-input" class="tc-rev-input-control" type="text" placeholder="Digite algo...">
+<pre><code>&lt;input class="tc-rev-input-control" type="text" placeholder="Digite algo..."&gt;</code></pre>
+
+<h2>Input com ícone</h2>
+<div class="tc-rev-input-icon-container" style="width: 300px;">
+  <input class="tc-rev-input-icon-control" type="text" placeholder="Com ícone à direita">
+  <span class="tc-rev-input-icon">🔍</span>
+</div>
+<pre><code>&lt;div class="tc-rev-input-icon-container"&gt;
+  &lt;input class="tc-rev-input-icon-control" type="text" placeholder="Com ícone à direita"&gt;
+  &lt;span class="tc-rev-input-icon"&gt;🔍&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+<h2>Input de busca</h2>
+<div class="tc-rev-search-input-container" style="width: 300px;">
+  <input class="tc-rev-search-input-control" type="text" placeholder="Buscar...">
+  <button class="tc-rev-search-input-btn">🔍</button>
+</div>
+<pre><code>&lt;div class="tc-rev-search-input-container"&gt;
+  &lt;input class="tc-rev-search-input-control" type="text" placeholder="Buscar..."&gt;
+  &lt;button class="tc-rev-search-input-btn"&gt;🔍&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+<h2>Radio button</h2>
+<label><input type="radio" class="tc-rev-input-control" name="exemplo-radio" checked> Opção 1</label>
+<label><input type="radio" class="tc-rev-input-control" name="exemplo-radio"> Opção 2</label>
+<pre><code>&lt;input type="radio" class="tc-rev-input-control" name="exemplo-radio" checked&gt;
+&lt;input type="radio" class="tc-rev-input-control" name="exemplo-radio"&gt;</code></pre>
+
+<h2>Checkbox</h2>
+<label><input type="checkbox" class="tc-rev-input-checkbox" checked> Aceito os termos</label>
+<pre><code>&lt;input type="checkbox" class="tc-rev-input-checkbox" checked&gt;</code></pre>
+
+<h2>Estados</h2>
+<ul>
+  <li><strong>Normal</strong>: Estado padrão do campo.</li>
+  <li><strong>Hover/Focus</strong>: Borda fica azul (primary).</li>
+  <li><strong>Checked</strong>: Para radio/checkbox, mostra seleção customizada.</li>
+  <li><strong>Disabled</strong>: Use o atributo <code>disabled</code> para desabilitar o campo.</li>
+</ul>
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+  <input class="tc-rev-input-control" type="text" placeholder="Normal">
+  <input class="tc-rev-input-control" type="text" placeholder="Desabilitado" disabled>
+  <input type="checkbox" class="tc-rev-input-checkbox" disabled>
+  <input type="radio" class="tc-rev-input-control" name="exemplo-radio2" disabled>
+</div>
