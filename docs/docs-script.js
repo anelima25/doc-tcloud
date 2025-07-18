@@ -6,6 +6,10 @@ const sectionFiles = {
   sombras: 'section-sombras.html',
   temas: 'section-temas.html',
   botao: 'section-component-button.html',
+  input: 'section-component-input.html',
+  tab: 'section-component-tab-item.html',
+  table: 'section-component-table.html',
+  util: 'section-component-util.html',
 };
 
 function loadSectionContent(id, file) {
