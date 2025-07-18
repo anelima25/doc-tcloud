@@ -5,6 +5,7 @@ const sectionFiles = {
   cores: 'section-cores.html',
   sombras: 'section-sombras.html',
   temas: 'section-temas.html',
+  botao: 'section-component-button.html',
 };
 
 function loadSectionContent(id, file) {
